@@ -261,7 +261,7 @@
 				<version>2.1</version>
 				<configuration>
 					<server>myserver</server>
-					<url>http://172.27.59.14:8080/manager/text</url>
+					<url>http://localhost:8080/manager/text</url>
 					<username>vijeta</username>
 					<password>vijeta</password>
 					<path>/EmployeeApplication</path>
