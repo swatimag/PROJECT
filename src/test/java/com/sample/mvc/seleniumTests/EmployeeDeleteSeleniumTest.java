@@ -27,7 +27,7 @@ public class EmployeeDeleteSeleniumTest {
   public void testEdit() throws Exception {
     driver.get(baseUrl + "");
    
-    driver.findElement(By.xpath("(//a[contains(text(),'delete')])[3]")).click();
+    driver.findElement(By.xpath("(//a[contains(text(),'delete')])[1]")).click();
 
    
   }

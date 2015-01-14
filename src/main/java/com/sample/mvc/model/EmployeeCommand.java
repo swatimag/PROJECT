@@ -10,6 +10,11 @@ import javax.persistence.Table;
 public class EmployeeCommand {
 
 	
+	public EmployeeCommand() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@Column(name = "code")
 	public int code;

@@ -26,7 +26,7 @@ public class EmployeeEditSeleniumTest {
   public void testEdit() throws Exception {
     driver.get(baseUrl + "");
    
-    driver.findElement(By.xpath("(//a[contains(text(),'edit')])[2]")).click();
+    driver.findElement(By.xpath("(//a[contains(text(),'edit')])[1]")).click();
     driver.findElement(By.name("name")).clear();
     driver.findElement(By.name("name")).sendKeys("Ruuuu");
     driver.findElement(By.name("city")).clear();

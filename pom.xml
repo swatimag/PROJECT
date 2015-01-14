@@ -360,10 +360,11 @@
 							<goals>
 								<goal>test</goal>
 							</goals>
-							<configuration>
+							 <configuration>
+							
 								<excludes>
 								<exclude>**/EmployeeControllerTest.java</exclude>
-								<!-- <exclude>**/com.sample.mvc.service/</exclude>
+								<!--   <exclude>**/com.sample.mvc.service/</exclude>
 								<exclude>**/com.sample.mvc.dao/</exclude> -->
 							</excludes>
 
