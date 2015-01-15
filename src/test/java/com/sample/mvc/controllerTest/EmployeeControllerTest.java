@@ -23,6 +23,7 @@ import com.sample.mvc.service.EmployeeService;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 //@ContextConfiguration(classes=BaseTestConfig.class)
+//context
 @ContextConfiguration(locations = {"classpath*:/WEB-INF/employee-servlet.xml"})
 
 //@Transactional
