@@ -1,5 +1,5 @@
-processTreeMapDashJson (  {"id":"Clover database Thu Jan 15 2015 14:35:09 IST0","name":"","data":{
-    "$area":58.0,"$color":36.206894,"title":" 58 Elements, 36.2% Coverage"},
+processTreeMapDashJson (  {"id":"Clover database Fri Jan 16 2015 15:23:12 IST0","name":"","data":{
+    "$area":58.0,"$color":39.655174,"title":" 58 Elements, 39.7% Coverage"},
   "children":[{"id":"com.sample.mvc.service48","name":
       "com.sample.mvc.service","data":{"$area":10.0,"$color":0.0,"title":
         "com.sample.mvc.service 10 Elements, 0% Coverage"},"children":[]},{
@@ -10,7 +10,7 @@ processTreeMapDashJson (  {"id":"Clover database Thu Jan 15 2015 14:35:09 IST0",
         "$area":15.0,"$color":0.0,"title":
         "com.sample.mvc.dao 15 Elements, 0% Coverage"},"children":[]},{"id":
       "com.sample.mvc.controller0","name":"com.sample.mvc.controller","data":
-      {"$area":19.0,"$color":36.842106,"title":
-        "com.sample.mvc.controller 19 Elements, 36.8% Coverage"},"children":[]}]}
+      {"$area":19.0,"$color":47.368423,"title":
+        "com.sample.mvc.controller 19 Elements, 47.4% Coverage"},"children":[]}]}
 
  ); 

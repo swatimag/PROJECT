@@ -3,12 +3,15 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import static org.mockito.Mockito.*;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -19,6 +22,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import com.sample.mvc.controller.EmployeeController;
 import com.sample.mvc.model.EmployeeCommand;
 import com.sample.mvc.service.EmployeeService;
+import com.sample.mvc.service.EmployeeServiceImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
@@ -34,7 +38,7 @@ public class EmployeeControllerTest {
 	
 	
 	 @Mock
-	 private EmployeeService employeeService;
+	 private EmployeeServiceImpl employeeService;
 	    @InjectMocks
 	    private EmployeeController employeeController;
 	 
@@ -60,6 +64,8 @@ public class EmployeeControllerTest {
 	                .param("city", "mvclastname"))
 	                .andExpect(view().name("redirect:list"))
 	                .andExpect(model().attributeExists("employeeCommand"));
+	        Mockito.doCallRealMethod().when(employeeService).addEmployee(any(EmployeeCommand.class));
+	        Mockito.verify(employeeService).addEmployee(any(EmployeeCommand.class));
 	     
 	    }
 	    
@@ -80,6 +86,30 @@ public class EmployeeControllerTest {
 //					.andExpect(model().attribute("employee",  105 /*hasProperty("code", is(105))*/))
 					;
 
+			when(employeeService.getEmployeebyId(anyInt())).thenReturn(emp);
+			verify(employeeService).getEmployeebyId(anyInt());
 			
 		}
+	    
+	    
+	    @Test
+		public void testViewHome()
+		{
+			
+			Assert.assertEquals("home", employeeController.viewHome());
+			
+		}
+	    
+	    @Test
+	    public void testUpdateEmployee() throws Exception
+	    {
+	    	EmployeeCommand emp = new EmployeeCommand();
+	    	 emp.setCode(105);
+           emp.setName("vikas");
+           emp.setCity("pune");
+	    	employeeService.updateEmployee(emp);
+	    	Mockito.verify(employeeService).updateEmployee(any(EmployeeCommand.class));
+	    	
+	    	
+	    }
 }

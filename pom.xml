@@ -336,23 +336,19 @@
 				</plugin>
 
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
+				<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.10</version>
-
-
 					<!-- <configuration> <excludes> <exclude>**/EmployeeControllerTest.java</exclude> 
 						<exclude>**/EmployeeAddControllerTest.java</exclude> </excludes> </configuration> -->
 					<configuration>
-						<!-- Skip the normal tests, we'll run them in the integration-test 
-							phase <skip>true</skip> -->
-
-						
+						<!-- Skip the normal tests, we'll run them in the integration-test phase 
+							<skip>true</skip> -->
 						<excludes>
 							<exclude>**/EmployeeDeleteSeleniumTest.java</exclude>
 							<exclude>**/EmployeeAddSeleniumTest.java</exclude>
 							<exclude>**/EmployeeEditSeleniumTest.java</exclude>
-						</excludes> 
+						</excludes>
 					</configuration>
 					<executions>
 						<execution>
@@ -360,20 +356,15 @@
 							<goals>
 								<goal>test</goal>
 							</goals>
-							 <configuration>
-							
+							<configuration>
 								<excludes>
-								<exclude>**/EmployeeControllerTest.java</exclude>
-								<!--   <exclude>**/com.sample.mvc.service/</exclude>
-								<exclude>**/com.sample.mvc.dao/</exclude> -->
-							</excludes>
-
-							</configuration> 
+									<exclude>**/EmployeeControllerTest.java</exclude>
+									<!-- <exclude>**/com.sample.mvc.service/</exclude> <exclude>**/com.sample.mvc.dao/</exclude> -->
+								</excludes>
+							</configuration>
 						</execution>
 					</executions>
-
-
-				</plugin>
+</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
