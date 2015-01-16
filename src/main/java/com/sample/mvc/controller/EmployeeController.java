@@ -17,7 +17,7 @@ import com.sample.mvc.service.EmployeeService;
 public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
-
+	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String viewHome() {
 		return "home";
@@ -29,7 +29,8 @@ public class EmployeeController {
 	    map.put("contactList", employeeService.listContact());
 	    return "list";
 	}
-	 
+	
+	// add employee controller 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public ModelAndView addEmployee(
 			@ModelAttribute EmployeeCommand employeeCommand) {
