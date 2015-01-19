@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.sample.mvc.model.EmployeeCommand;
-
+// Class started
 public class EmployeeDAOImpl implements EmployeeDAO{
 
 	@Autowired
