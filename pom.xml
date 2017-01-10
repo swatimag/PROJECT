@@ -315,7 +315,8 @@
 					</configuration>
 				</plugin>
 
-
+				<plugin> 
+ 
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>sonar-maven-plugin</artifactId>
@@ -329,7 +330,7 @@
 						<execution>
 							<phase>verify</phase>
 							<goals>
-								<goal></goal>
+								<goal>sonar</goal>
 							</goals>
 						</execution>
 					</executions>
