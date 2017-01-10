@@ -314,8 +314,6 @@
 						</webResources>
 					</configuration>
 				</plugin>
-
-				<plugin> 
  
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
